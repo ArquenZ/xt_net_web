@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F3AE35E-38D6-4CBD-BF17-5EF080CF5692}</ProjectGuid>
+    <ProjectGuid>{7B7730FC-F714-4C16-8B78-1D9F5CEEE8CF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task02</RootNamespace>
-    <AssemblyName>Task02</AssemblyName>
+    <RootNamespace>_03Task</RootNamespace>
+    <AssemblyName>03Task</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="02Simple.cs" />
+    <Compile Include="03Square.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
