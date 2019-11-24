@@ -10,8 +10,9 @@ namespace Task1._2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите число строк");
-            Triangle(InputTest(ReadInput()));
+            Console.WriteLine("Введите число треугольников");
+            Tree(Triangle(InputTest(ReadInput())));
+
             Console.ReadLine();
         }
         private static int ReadInput()
@@ -32,18 +33,18 @@ namespace Task1._2
                 return ReadInput();
             }
         }
-        private static void Triangle(int a)
+        private static string[] Triangle(int a)
         {
             string[] arr = new string[a];
             string s = "*";
             //создаем последнюю строку в массиве строк
-            for (int i = 0; i<a-1; i++)
+            for (int i = 0; i < a - 1; i++)
             {
-                s = s + "**";                
+                s = s + "**";
             }
             //заполняем оостальной массив
-            for (int i = a-1; i >= 0; i--)
-            {                   
+            for (int i = a - 1; i >= 0; i--)
+            {
                 try
                 {
                     arr[i] = s;
@@ -54,12 +55,19 @@ namespace Task1._2
                 {
                     arr[i] = s;
                 }
-            }
-            for (int i = 0; i < a; i++)
-            {
-                Console.WriteLine(arr[i]);
-            }
-
+            }            
+            return arr;
+        }
+        private static void Tree(string[] arr)
+        {
+            int a = arr.Length;
+            for (int x=arr.Length; x>=0; x--)
+            {                
+                for (int i = 0; i < a-x; i++)
+                {
+                    Console.WriteLine(arr[i]);
+                }
+            }            
         }
     }
 }
