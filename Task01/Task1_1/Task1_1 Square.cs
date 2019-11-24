@@ -49,6 +49,6 @@ namespace Task1_1
         {
             return ((ulong)a * (ulong)b);
         }
-        
+
     }
 }
