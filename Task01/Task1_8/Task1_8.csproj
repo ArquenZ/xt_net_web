@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B81F993F-5C5F-42F2-B8D6-FB4C7B17001A}</ProjectGuid>
+    <ProjectGuid>{1F668B26-46B4-4BDA-9AD2-F317888E3A5C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task1_7</RootNamespace>
-    <AssemblyName>Task1_7</AssemblyName>
+    <RootNamespace>Task1_8</RootNamespace>
+    <AssemblyName>Task1_8</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Task1_7 Array_Processing.cs" />
+    <Compile Include="Task1_8 3dArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
