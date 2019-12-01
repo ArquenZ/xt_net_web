@@ -18,7 +18,7 @@ namespace Task2_8
             field = new Field(800, 600);
             player = new Player();
         }
-        ISpawnable bonus = new Cherry();
+        //ISpawnable bonus = new Cherry();
     }
     class Player : IMovable
     {
