@@ -10,9 +10,9 @@ namespace Task3_3
     class DynamicArray<T> : IEnumerable, IEnumerable<T>, IEnumerator, IEnumerator<T>
     {
         public T[] arr;       
-        public int Length { get; private set; } = 0;        
-        public int Capacity { get; private set; }
-        public T this[int ind]
+        public int Length { get; protected set; } = 0;        
+        public virtual int Capacity { get; protected set; }
+        public virtual T this[int ind]
         {
             get
             {
@@ -25,7 +25,7 @@ namespace Task3_3
                 arr[ind] = value;
             }
         }
-        private int position = -1;
+        protected int position = -1;
         public DynamicArray()
         {
             arr = new T[8];
@@ -92,7 +92,7 @@ namespace Task3_3
         //в противном случае. При выходе за границу массива должно генерироваться исключение ArgumentOutOfRangeException
         public void Insert(int place, T inserted)
         {
-            if (place > Length || place < 0) throw new ArgumentOutOfRangeException("Не корректное значение для индесатора.");
+            if (place > Length || place < 0) throw new Exception("Неверный индекс");
             CapacityCheck(Length++);            
             T temp = arr[place];
             for (int i = Length; i > place; i--)
@@ -123,12 +123,10 @@ namespace Task3_3
         {
             get
             {
-                //if (position == -1 || position >= Length)
-                //    throw new InvalidOperationException();
                 return arr[position];
             }
         }
-        public bool MoveNext()
+        public virtual bool MoveNext()
         {
             if (position < Length - 1)
             {
@@ -139,7 +137,7 @@ namespace Task3_3
                 Reset();
             return false;
         }
-        public void Reset()
+        public virtual void Reset()
         {
             position = -1;
         }
@@ -147,7 +145,7 @@ namespace Task3_3
         {
         }
         //Проверка на емкость и увеличение емкости при необходимости
-        private void CapacityCheck(int newlength)
+        protected void CapacityCheck(int newlength)
         {
             int capacity = Capacity;
             if (capacity < newlength)

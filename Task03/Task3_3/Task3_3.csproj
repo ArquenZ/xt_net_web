@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CycledArray.cs" />
     <Compile Include="ExtensionableArray.cs" />
     <Compile Include="Task3_3 Array.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
